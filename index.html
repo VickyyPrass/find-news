@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+
+        <title>FoxNews.com</title>
+    </head>
+    <body>
+        <nav
+            class="navbar navbar-expand-lg sticky-top p-3"
+            style="background-color: #5ecece"
+        >
+            <div class="container">
+                <a class="navbar-brand" href="#">FoxNews.com</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0"></ul>
+                    <div class="d-flex" role="search">
+                        <input
+                            class="input-keyword form-control me-2"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
+                        <button class="btn btn-success search-news-button">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container data_article">
+            <!-- Main -->
+            <main class="sidebar__main">
+                <h5>Our News</h5>
+                <div class="loading"></div>
+                <div class="text-error-news"></div>
+                <div class="container-news"></div>
+                <div class="pagination-box">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <button class="page-link" id="prevButton">
+                                    Previous
+                                </button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">1</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">2</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link">3</button>
+                            </li>
+                            <li class="page-item">
+                                <button class="page-link" id="nextButton">
+                                    Next
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </main>
+            <!-- Sidebar -->
+            <aside class="sidebar__sidebar">
+                <h5>Breaking News</h5>
+                <div class="container-top-headline-news"></div>
+            </aside>
+        </div>
+
+        <footer class="">
+            <p class="text-center">by Vicky Galih Prasetyawan</p>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+        <script src="app.js" type="module"></script>
+    </body>
+</html>
