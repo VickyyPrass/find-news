@@ -1,4 +1,8 @@
-import { loadDataHeadline, renderDataSearchNews } from "./getNews.js";
+import {
+    loadDataHeadline,
+    renderDataSearchNews,
+    showResponseMessage,
+} from "./getNews.js";
 import { showLoading } from "./loading.js";
 
 loadDataHeadline();
@@ -12,6 +16,6 @@ btnSearch.addEventListener("click", async function () {
         await renderDataSearchNews();
         inputKeyword.value = "";
     } catch (error) {
-        alert(error);
+        showResponseMessage(error);
     }
 });

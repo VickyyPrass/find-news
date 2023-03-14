@@ -17,8 +17,9 @@ const renderDataSearchNews = async () => {
         const dataResponse = await fetch(newsUrl + inputKeyword.value);
         const response = await dataResponse.json();
 
-        if (response.error) {
-            showResponseMessage(responJSON.message);
+        if (!dataResponse.ok) {
+            showResponseMessage(response.message);
+            hideLoading();
         } else {
             const totalNews = response.totalResults;
             const news = response.articles;
@@ -80,6 +81,7 @@ const renderDataSearchNews = async () => {
         }
     } catch (error) {
         showResponseMessage();
+        hideLoading();
     }
 };
 
@@ -88,8 +90,8 @@ const loadDataHeadline = async () => {
         const dataResponse = await fetch(topHeadlinesUrl);
         const response = await dataResponse.json();
 
-        if (response.error) {
-            showResponseMessage(responJSON.message);
+        if (!dataResponse.ok) {
+            showResponseMessage(response.message);
         } else {
             const headline = response.articles;
             let cardHeadline = "";
@@ -123,4 +125,4 @@ const showResponseMessage = (
     textError.innerHTML = message;
 };
 
-export { loadDataHeadline, renderDataSearchNews };
+export { loadDataHeadline, renderDataSearchNews, showResponseMessage };
